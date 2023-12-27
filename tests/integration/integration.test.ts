@@ -2,10 +2,10 @@ import { expect } from 'chai'
 
 import { describe, it } from 'mocha'
 
-import { StockMarketInvestment } from '../src/stockMarketInvestment'
-import { testCases } from './data/testCases'
+import { StockMarketInvestment } from '../../src/stockMarketInvestment'
+import { testCases } from '../data/testCases'
 
-describe('Test cases', () => {
+describe('Integrations tests', () => {
   describe('Case 1', () => {
     it('Should return taxes for case 1', () => {
       const s = new StockMarketInvestment(testCases.case1.input).getTaxes()
