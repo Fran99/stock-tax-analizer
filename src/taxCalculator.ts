@@ -28,7 +28,7 @@ export class TaxCalculator {
     })
   }
 
-  buy (): number {
+  private buy (): number {
     // Every buy we need to calculate the weighted average price.
     this.weightedAverage = ((this.stocksQty * this.weightedAverage) +
             (this.currentOperation.qty * this.currentOperation.unitCost)) /
@@ -41,7 +41,7 @@ export class TaxCalculator {
     return 0
   }
 
-  sellWithProfit (): number {
+  private sellWithProfit (): number {
     this.stocksQty -= this.currentOperation.qty
     const profit = ((this.currentOperation.unitCost - this.weightedAverage) * this.currentOperation.qty) - this.losses
     this.losses -= (this.currentOperation.unitCost - this.weightedAverage) * this.currentOperation.qty
@@ -49,13 +49,13 @@ export class TaxCalculator {
     return profit > 0 ? profit * this.taxPercentage : 0
   }
 
-  sellWithLoss (): number {
+  private sellWithLoss (): number {
     this.stocksQty -= this.currentOperation.qty
     this.losses += (this.weightedAverage - this.currentOperation.unitCost) * this.currentOperation.qty
     return 0
   }
 
-  sellWithinLimit (): number {
+  private sellWithinLimit (): number {
     this.stocksQty -= this.currentOperation.qty
     return 0
   }
