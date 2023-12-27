@@ -2,8 +2,8 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { CliInputParser } from '../../src/cliInputParser'
 
-describe('CliInputParser', () => {
-  describe('parse', () => {
+describe('CliInputParser unit test', () => {
+  describe('parse()', () => {
     it('Input data 1', () => {
       const input = '[{"operation":"buy","unit-cost":10.00,"quantity": 10000}]'
       const parsedData = new CliInputParser(input).parse()
