@@ -17,7 +17,7 @@ import { Operation } from './operation'
  * {...}
  *
  */
-export default class OperationConverter {
+export class OperationConverter {
   constructor (public plainOperationCollectionArray: any[][]) {}
 
   process (): Operation[][] {
