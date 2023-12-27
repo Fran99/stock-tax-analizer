@@ -1,6 +1,7 @@
-import CliInputParser from './cliInputParser'
-import OperationConverter from './operationConverter'
-import StockMarketInvestment from './stockMarketInvestment'
+import { CliInputParser } from './cliInputParser'
+import { OperationConverter } from './operationConverter'
+import { StockMarketInvestment } from './stockMarketInvestment'
+import { ConsoleOutput } from './consoleOutput'
 
 process.stdin.setEncoding('utf8')
 
@@ -12,9 +13,8 @@ process.stdin.on('data', (input) => {
     const operationsCollectionArray = new OperationConverter(jsonOperationCollectionArray).process()
     const stockMarketInvestment = new StockMarketInvestment(operationsCollectionArray)
 
-    console.log(
-      stockMarketInvestment.getTaxes()
-    )
+    const taxes = stockMarketInvestment.getTaxes();
+    (new ConsoleOutput(taxes)).write()
   } catch (e) {
     console.error('An error has occurred, please try again')
   }
