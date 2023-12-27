@@ -7,7 +7,7 @@
     "cli": "ts-node src/index.ts",
     "cli:data": "ts-node src/index.ts < data/all.txt",
     "test": "mocha --require ts-node/register tests/**/*.ts",
-    "test:integration": "mocha --require ts-node/register ./tests/integration.test.ts --watch --watch-files src/**/*,tests/**/*",
+    "test:integration": "mocha --require ts-node/register tests/integration/integration.test.ts --watch --watch-files src/**/*,tests/**/*",
     "lint": "eslint --fix"
   },
   "author": "",
