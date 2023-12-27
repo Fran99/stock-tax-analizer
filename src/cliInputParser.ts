@@ -1,4 +1,4 @@
-export default class CliInputParser {
+export class CliInputParser {
   constructor (public data: string) {}
   parse (): any[] {
     const parsedInput = this.data.trim().split('\n')
