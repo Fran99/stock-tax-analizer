@@ -2,7 +2,7 @@ import { expect } from 'chai'
 
 import { describe, it } from 'mocha'
 
-import StockMarketInvestment from '../src/stockMarketInvestment'
+import { StockMarketInvestment } from '../src/stockMarketInvestment'
 import { testCases } from './data/testCases'
 
 describe('Test cases', () => {
