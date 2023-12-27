@@ -5,15 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "run": "ts-node src/index.ts",
-    "test": "mocha --require ts-node/register tests/**/*.ts"
+    "cli": "ts-node src/index.ts",
+    "cli:data": "ts-node src/index.ts < data/all.txt",
+    "test": "mocha --require ts-node/register tests/**/*.ts",
+    "test:integration": "mocha --require ts-node/register ./tests/integration.test.ts --watch --watch-files src/**/*,tests/**/*",
+    "lint": "eslint --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.6",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
     "chai": "^4.3.10",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.5.0",
+    "eslint-plugin-promise": "^6.1.1",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
