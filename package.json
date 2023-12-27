@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "cli": "ts-node src/index.ts",
     "cli:data": "ts-node src/index.ts < data/all.txt",
     "test": "mocha --require ts-node/register tests/**/*.ts",
