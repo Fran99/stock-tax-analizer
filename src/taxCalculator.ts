@@ -25,8 +25,8 @@ export class TaxCalculator {
   private buy (operation: Operation): number {
     // Every buy we need to calculate the weighted average price.
     this.weightedAverage = ((this.stocksQty * this.weightedAverage) +
-            (operation.qty * operation.unitCost)) /
-            (this.stocksQty + operation.qty)
+                           (operation.qty * operation.unitCost)) /
+                           (this.stocksQty + operation.qty)
     this.weightedAverage = parseFloat(this.weightedAverage.toFixed(2))
     // Add stocks to the overall count
     this.stocksQty += operation.qty
@@ -37,20 +37,28 @@ export class TaxCalculator {
 
   private sellWithProfit (operation: Operation): number {
     this.stocksQty -= operation.qty
-    const profit = ((operation.unitCost - this.weightedAverage) * operation.qty) - this.losses
-    this.losses -= (operation.unitCost - this.weightedAverage) * operation.qty
-    if (this.losses < 0) this.losses = 0
+    // Calculates the operation's profit
+    const operationProfit = ((operation.unitCost - this.weightedAverage) * operation.qty)
+    // Deduct the losses
+    const profitBeforeTax = operationProfit - this.losses
+    // Recalculate the losses
+    this.losses = Math.max(this.losses - operationProfit, 0)
 
-    return profit > 0 ? profit * this.taxPercentage : 0
+    // If only losses have been deducted without generating any profit, return 0;
+    // Otherwise, return the applicable taxes
+    return profitBeforeTax > 0 ? profitBeforeTax * this.taxPercentage : 0
   }
 
   private sellWithLoss (operation: Operation): number {
     this.stocksQty -= operation.qty
+    // Add losses
     this.losses += (this.weightedAverage - operation.unitCost) * operation.qty
+    // Do not pay taxes
     return 0
   }
 
   private sellWithinLimit (operation: Operation): number {
+    // Operation is less than the limit; does not pay taxes nor touches the losses
     this.stocksQty -= operation.qty
     return 0
   }
