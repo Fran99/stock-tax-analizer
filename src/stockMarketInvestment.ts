@@ -10,6 +10,8 @@ export class StockMarketInvestment {
   getTaxes (): ResponseDto[][] {
     // Loop over each collection, create a new calculator and execute
     return this.operationCollectionArray.map((operationCollection) => {
+      // Each operation instantiates a new TaxCalculator instance,
+      // guaranteeing the absence of shared state among collections.
       const operationCalculator = new TaxCalculator()
       return operationCalculator.execute(operationCollection)
     })
