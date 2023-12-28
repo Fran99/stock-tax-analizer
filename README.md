@@ -4,16 +4,16 @@
 Capital Gains, implemented in TypeScript, is a command-line application (CLI) that evaluates the tax implications of a stock market investment through the analysis of profits or losses.
 
 ### How to run the CLI?
-- You need to have Node.js v18.16.0 or above installed in your system
-- In the terminal, in the project root run `npm install`
+- You need to have Node.js v18.16.0 or above installed in your system.
+- In the terminal, in the project root run `npm install`.
 
 #### Commands:
-- `npm run cli`: runs the cli with no data waiting for input
-- `npm run cli:data`: runs the CLI with all the test cases from a file
-- `npm run test`: runs all the tests (unit and integration)
-- `npm run test:integration`: runs all the integration tests
-- `npm run test:unit`: runs all the unit tests
-- `npm run coverage`: runs all the tests with coverage
+- `npm run cli`: runs the cli with no data waiting for input.
+- `npm run cli:data`: runs the CLI with all the test cases from a file.
+- `npm run test`: runs all the tests (unit and integration).
+- `npm run test:integration`: runs all the integration tests.
+- `npm run test:unit`: runs all the unit tests.
+- `npm run coverage`: runs all the tests with coverage.
 
 The folder /data contains all the cases specified in the requirements if needed.
 
@@ -21,7 +21,7 @@ The folder /data contains all the cases specified in the requirements if needed.
 - `ts-node`: Enables running TypeScript files directly in Node.js without pre-compiling to JavaScript.
 - `mocha`: Test framework for JavaScript and Node.js.
 - `chai`: Assertion library for Node.js and browsers.
-- `eslint`: Linting tool for identifying and fixing problems in JavaScript and TypeScript
+- `eslint`: Linting tool for identifying and fixing problems in JavaScript and TypeScript.
 
 ### System requirements:
 1. The program will accept arrays, each line representing stock market operations encoded in JSON.
