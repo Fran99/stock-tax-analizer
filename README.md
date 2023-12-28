@@ -1,5 +1,8 @@
 # Nubank | Capital Gains
 
+### Overview:
+Capital Gains is a command line application (CLI) that calculates how much tax you should
+pay based on the profit or losses of a stock market investment, written in TypeScript.
 
 ### How to run the CLI?
 - You need to have Node.js v18.16.0 or above installed in your system
@@ -20,10 +23,6 @@ The folder /data contains all the cases specified in the requirements if needed.
 - `mocha`: Test framework for JavaScript and Node.js.
 - `chai`: Assertion library for Node.js and browsers.
 - `eslint`: Linting tool for identifying and fixing problems in JavaScript and TypeScript
-
-### Overview:
-Capital Gains is a command line application (CLI) that calculates how much tax you should
-pay based on the profit or losses of a stock market investment, written in TypeScript.
 
 ### System requirements:
 1. The program will accept arrays, each line representing stock market operations encoded in JSON.
