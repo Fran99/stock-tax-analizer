@@ -1,4 +1,5 @@
 import { Operation } from './operation'
+import { type OperationDto } from './dtos/operation.dto'
 
 /**
  * Transforms a plain JS array into an array of operation collections.
@@ -14,15 +15,15 @@ import { Operation } from './operation'
  * [{...}, {...}, {...}]
  *
  * plainOperation
- * {...}
+ * {...} -> Instance of Operation
  *
  */
 export class OperationConverter {
-  constructor (public plainOperationCollectionArray: any[][]) {}
+  constructor (public plainOperationCollectionArray: OperationDto[][]) {}
 
-  process (): Operation[][] {
+  convert (): Operation[][] {
     return this.plainOperationCollectionArray.map((plainOperationArray) => {
-      return plainOperationArray.map((plainOperation: { operation: 'buy' | 'sell', ['unit-cost']: number, quantity: number }) =>
+      return plainOperationArray.map((plainOperation: OperationDto) =>
         new Operation(plainOperation.operation, plainOperation['unit-cost'], plainOperation.quantity)
       )
     })
