@@ -9,7 +9,7 @@
     "test": "mocha --require ts-node/register tests/**/*.ts",
     "test:unit": "mocha --require ts-node/register tests/unit/*.ts",
     "test:integration": "mocha --require ts-node/register tests/integration/integration.test.ts --watch --watch-files src/**/*,tests/**/*",
-    "coverage": "nyc npm run test:unit",
+    "coverage": "nyc npm run test",
     "lint": "eslint --fix"
   },
   "author": "",
