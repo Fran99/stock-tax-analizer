@@ -27,6 +27,7 @@ export class TaxCalculator {
     this.weightedAverage = ((this.stocksQty * this.weightedAverage) +
                            (operation.qty * operation.unitCost)) /
                            (this.stocksQty + operation.qty)
+    // Round decimals to the nearest hundredth
     this.weightedAverage = parseFloat(this.weightedAverage.toFixed(2))
     // Add stocks to the overall count
     this.stocksQty += operation.qty
