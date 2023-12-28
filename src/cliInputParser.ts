@@ -1,6 +1,10 @@
 import { type OperationDto } from './dtos/operation.dto'
 import { type IParser } from './interfaces/IParser'
 
+/**
+ * CliInputParser accepts a string, parses it to create a valid JavaScript
+ * array adhering to the OperationDto interface.
+ */
 export class CliInputParser implements IParser {
   constructor (public data: string) {}
 
