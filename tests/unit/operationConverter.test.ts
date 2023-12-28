@@ -2,13 +2,14 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { OperationConverter } from '../../src/operationConverter'
 import { Operation } from '../../src/operation'
+import { type OperationDto } from '../../src/dtos/operation.dto'
 
 describe('OperationConverter unit test', () => {
-  const input = [
+  const input: OperationDto[][] = [
     [{ operation: 'buy', 'unit-cost': 10, quantity: 100 }, { operation: 'sell', 'unit-cost': 15.00, quantity: 50 }, { operation: 'sell', 'unit-cost': 15.00, quantity: 50 }]
   ]
   const oc = new OperationConverter(input)
-  const res = oc.process()
+  const res = oc.convert()
 
   describe('process()', () => {
     it('Should return true if the first operation is an instance of Operation"', () => {
