@@ -1,6 +1,6 @@
 import { type Operation } from './operation'
 import { TaxCalculator } from './taxCalculator'
-import { type ResponseDto } from './dtos/responseDto'
+import { type ResponseDto } from './dtos/response.dto'
 
 export class StockMarketInvestment {
   constructor (

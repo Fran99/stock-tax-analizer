@@ -4,7 +4,7 @@ import { StockMarketInvestment } from './stockMarketInvestment'
 import { ConsoleOutput } from './consoleOutput'
 import { type OperationDto } from './dtos/operation.dto'
 import { type Operation } from './operation'
-import { type ResponseDto } from './dtos/responseDto'
+import { type ResponseDto } from './dtos/response.dto'
 
 process.stdin.setEncoding('utf8')
 

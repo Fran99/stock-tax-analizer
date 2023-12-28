@@ -1,5 +1,5 @@
 import { type Operation } from './operation'
-import { type ResponseDto } from './dtos/responseDto'
+import { type ResponseDto } from './dtos/response.dto'
 
 /**
  * Class in charge of calculate taxes of a collection of operations.
