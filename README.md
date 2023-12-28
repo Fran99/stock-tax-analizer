@@ -37,7 +37,15 @@ The folder /data contains all the cases specified in the requirements if needed.
 4. No taxes apply if the total amount (unit cost of selling multiplied by quantity) is less than or equal to $20,000.00. However, losses should be subtracted from future profits, emphasizing the use of the total amount rather than just the profit to determine tax liability.
 5. You do not pay any taxes for buying stocks.
 
+### Class overview:
+1. __CliInputParser__: Parses a string input into an array of collections of operation data transfer objects (DTO).
+2. __OperationConverter__: Accepts the Operation DTO and transforms it into a data structure based on instances of the Operation class.
+3. __Operation__: Responsible for instantiation for each OperationDto.
+4. __StockMarketInvestment__: The primary class of the program. Accepts an array of operation collections and executes a specific task, in this case, calculating the taxes to be paid.
+5. __TaxCalculator__: Conducts tax calculations for each given collection and provides a response, representing the calculated taxes.
+6. __ConsoleOutput__: Writes to the stdout
 
+### Activity diagram:
 
 ```
                ┌──────────────────┐
