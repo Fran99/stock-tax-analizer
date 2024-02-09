@@ -1,4 +1,4 @@
-# Nubank | Capital Gains
+# Capital Gains
 
 ### Overview:
 Capital Gains, implemented in TypeScript, is a command-line application (CLI) that evaluates the tax implications of a stock market investment through the analysis of profits or losses.
