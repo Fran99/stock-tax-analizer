@@ -1,7 +1,7 @@
-# Capital Gains
+# StockTaxAnalyzer
 
 ### Overview:
-Capital Gains, implemented in TypeScript, is a command-line application (CLI) that evaluates the tax implications of a stock market investment through the analysis of profits or losses.
+StockTaxAnalyzer, implemented in TypeScript, is a command-line application (CLI) that evaluates the tax implications of a stock market investment through the analysis of profits or losses.
 
 ### How to run the CLI?
 - You need to have Node.js v18.16.0 or above installed in your system.
